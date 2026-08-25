@@ -1,4 +1,5 @@
 CREATE DATABASE pet_shop_frazao;
+
 USE pet_shop_frazao;
 
 CREATE TABLE usuarios (
@@ -6,11 +7,12 @@ CREATE TABLE usuarios (
     nome VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE cachorros (
+CREATE TABLE pets (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome_cachorro VARCHAR(100) NOT NULL,
-    usuario_id INT, FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
-    raca_cachorro VARCHAR(100) NOT NULL,
-    idade_cachorro INT,
-    tipo_cachorro VARCHAR(100)
+    nome_pet VARCHAR(100) NOT NULL,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    raca_pet VARCHAR(100) NOT NULL,
+    idade_pet INT,
+    tipo_pet VARCHAR(100)
 );
