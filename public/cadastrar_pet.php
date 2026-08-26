@@ -6,6 +6,12 @@
 
         $nome_pet = $_POST['nome_pet'];
         $raca_pet = $_POST['raca_pet'];     
+
+    $sql = "INSERT INTO pets (nome_pet, raca_pet) VALUES (?, ?)";
+
+    $stmt = $conexao->prepare($sql);
+        
+
     }
 ?>
 
